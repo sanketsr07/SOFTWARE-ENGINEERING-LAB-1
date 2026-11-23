@@ -1,0 +1,12 @@
+test_allergy_check_is_case_insensitive (test_pharmacy_system.PharmacySystemTests.test_allergy_check_is_case_insensitive) ... ok
+test_dispense_uses_case_insensitive_stock_name (test_pharmacy_system.PharmacySystemTests.test_dispense_uses_case_insensitive_stock_name) ... ok
+test_non_positive_stock_and_dispense_quantities_are_rejected (test_pharmacy_system.PharmacySystemTests.test_non_positive_stock_and_dispense_quantities_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK
+Allergy warning for Kavya
+lines   cov%   module   (path)
+  118    39%   pharmacy_system   (C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\SOFTWARE-ENGINEERING-LAB-1\Lab-5\PES1UG24AM251_SE_LAB_5\pharmacy_system.py)
+   25    64%   test_pharmacy_system   (C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\SOFTWARE-ENGINEERING-LAB-1\Lab-5\PES1UG24AM251_SE_LAB_5\test_pharmacy_system.py)
