@@ -1,0 +1,27 @@
+$ C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\.venv\Scripts\python.exe -m coverage run --source=pet_walking_service -m pytest -v CodeCoverageTest_PES1UG24AM251_application.py
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 6
+collecting ... collected 11 items
+
+CodeCoverageTest_PES1UG24AM251_application.py::test_rejects_invalid_routes_and_transport_fees PASSED [  9%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_empty_and_unconfirmed_routes_return_zero_earnings PASSED [ 18%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_each_session_type_uses_its_base_fee[standard_60-40.0] PASSED [ 27%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_each_session_type_uses_its_base_fee[standard_30-27.0] PASSED [ 36%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_each_session_type_uses_its_base_fee[express_15-19.0] PASSED [ 45%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_default_session_and_empty_walk_list_are_supported PASSED [ 54%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_unknown_session_is_counted_as_an_incident PASSED [ 63%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_aggression_invalid_pet_count_and_medication_paths PASSED [ 72%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_large_pet_group_discount_meds_and_weekend_fee PASSED [ 81%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_incident_audit_and_threshold_boundary PASSED [ 90%]
+CodeCoverageTest_PES1UG24AM251_application.py::test_gps_collars_report_empty_online_and_lost_signal_states PASSED [100%]
+
+============================= 11 passed in 0.07s ==============================
+
+$ C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\.venv\Scripts\python.exe -m coverage report -m pet_walking_service.py
+Name                     Stmts   Miss  Cover   Missing
+------------------------------------------------------
+pet_walking_service.py      57      0   100%
+------------------------------------------------------
+TOTAL                       57      0   100%

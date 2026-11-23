@@ -1,0 +1,10 @@
+$ python -m coverage run -m pytest test_pet_walking.py
+.                                                                        [100%]
+1 passed in 0.03s
+
+$ python -m coverage report -m pet_walking_service.py
+Name                     Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------
+pet_walking_service.py      57     30     40     11    43%   3, 10, 16, 19-23, 33-34, 37-41, 43, 48, 51, 56, 58, 63-75
+--------------------------------------------------------------------
+TOTAL                       57     30     40     11    43%

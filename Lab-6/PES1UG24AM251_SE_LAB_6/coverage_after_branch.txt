@@ -1,0 +1,24 @@
+$ C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\.venv\Scripts\python.exe -m coverage run --branch --source=pet_walking_service -m pytest -v BranchCoverageTest_PES1UG24AM251_application.py
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 6
+collecting ... collected 8 items
+
+BranchCoverageTest_PES1UG24AM251_application.py::test_input_validation_true_and_false_paths PASSED [ 12%]
+BranchCoverageTest_PES1UG24AM251_application.py::test_route_confirmation_and_empty_iteration_paths PASSED [ 25%]
+BranchCoverageTest_PES1UG24AM251_application.py::test_all_session_selection_branches_and_unknown_session PASSED [ 37%]
+BranchCoverageTest_PES1UG24AM251_application.py::test_walk_validation_aggression_and_aggression_session_branch PASSED [ 50%]
+BranchCoverageTest_PES1UG24AM251_application.py::test_pet_count_discount_medication_and_weekend_branches PASSED [ 62%]
+BranchCoverageTest_PES1UG24AM251_application.py::test_incident_audit_branch_and_four_incident_boundary PASSED [ 75%]
+BranchCoverageTest_PES1UG24AM251_application.py::test_zero_revenue_and_positive_revenue_status_branches PASSED [ 87%]
+BranchCoverageTest_PES1UG24AM251_application.py::test_gps_empty_online_streak_reset_and_loss_branches PASSED [100%]
+
+============================== 8 passed in 0.06s ==============================
+
+$ C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\.venv\Scripts\python.exe -m coverage report -m pet_walking_service.py
+Name                     Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------
+pet_walking_service.py      57      0     40      0   100%
+--------------------------------------------------------------------
+TOTAL                       57      0     40      0   100%
