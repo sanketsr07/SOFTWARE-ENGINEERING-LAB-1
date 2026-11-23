@@ -37,3 +37,7 @@ python -m coverage report -m pet_walking_service.py
 - `coverage_before_code.txt` and `coverage_before_branch.txt` record the starter results.
 - `coverage_after_code.txt` and `coverage_after_branch.txt` record the completed runs.
 - The two test modules are separate as required by the handout.
+
+## Screenshot evidence
+
+The terminal output is included as four PNG images: `coverage_before_code.png`, `coverage_after_code.png`, `coverage_before_branch.png`, and `coverage_after_branch.png`.

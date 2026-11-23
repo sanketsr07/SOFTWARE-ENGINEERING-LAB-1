@@ -40,3 +40,7 @@ The line suite reaches 100% line coverage, and the branch suite reaches 100% lin
 Keep all your Lab 6 work in this `LAB6` folder. Lab 7 will be added to this repo later.
 
 Refer to the lab handout for instructions.
+
+## Screenshot evidence
+
+Terminal output images: `coverage_before_code.png`, `coverage_after_code.png`, `coverage_before_branch.png`, and `coverage_after_branch.png`.
