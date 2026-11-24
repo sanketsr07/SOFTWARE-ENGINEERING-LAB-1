@@ -1,0 +1,183 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7
+plugins: hypothesis-6.170.17
+collecting ... collected 6 items
+
+test_processor.py::test_parse_walk_schedule_no_crash FAILED              [ 16%]
+test_processor.py::test_compute_pace_per_pet_safe FAILED                 [ 33%]
+test_processor.py::test_lookup_temperament_surcharge_safe FAILED         [ 50%]
+test_processor.py::test_valid_schedule_keeps_expected_fee PASSED         [ 66%]
+test_processor.py::test_valid_pace_is_rounded_to_two_decimals PASSED     [ 83%]
+test_processor.py::test_valid_temperament_codes_keep_expected_surcharges FAILED [100%]
+
+================================== FAILURES ===================================
+______________________ test_parse_walk_schedule_no_crash ______________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 6, in test_parse_walk_schedule_no_crash
+  |     def test_parse_walk_schedule_no_crash(s):
+  |                    ^^^
+  | BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 8, in test_parse_walk_schedule_no_crash
+    |     parse_walk_schedule(s)
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\processor.py", line 2, in parse_walk_schedule
+    |     pets_str, mins_str, weekend_str = schedule_spec.strip().split('-')
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 3, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 10, in test_parse_walk_schedule_no_crash
+    |     pytest.fail(f"parse_walk_schedule crashed for {s!r}: {exc}")
+    | Failed: parse_walk_schedule crashed for '': not enough values to unpack (expected 3, got 1)
+    | Failing test case: test_parse_walk_schedule_no_crash(
+    |     s='',  # or any other generated value
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 8, in test_parse_walk_schedule_no_crash
+    |     parse_walk_schedule(s)
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\processor.py", line 2, in parse_walk_schedule
+    |     pets_str, mins_str, weekend_str = schedule_spec.strip().split('-')
+    |                                       ^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 10, in test_parse_walk_schedule_no_crash
+    |     pytest.fail(f"parse_walk_schedule crashed for {s!r}: {exc}")
+    | Failed: parse_walk_schedule crashed for None: 'NoneType' object has no attribute 'strip'
+    | Failing test case: test_parse_walk_schedule_no_crash(
+    |     s=None,  # or any other generated value
+    | )
+    +------------------------------------
+_______________________ test_compute_pace_per_pet_safe ________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 13, in test_compute_pace_per_pet_safe
+  |     def test_compute_pace_per_pet_safe(s):
+  |                    ^^^
+  | BaseExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 15, in test_compute_pace_per_pet_safe
+    |     compute_pace_per_pet(s)
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\processor.py", line 13, in compute_pace_per_pet
+    |     mins = float(mins_str)
+    |            ^^^^^^^^^^^^^^^
+    | ValueError: could not convert string to float: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 17, in test_compute_pace_per_pet_safe
+    |     pytest.fail(f"compute_pace_per_pet crashed for {s!r}: {exc}")
+    | Failed: compute_pace_per_pet crashed for '/': could not convert string to float: ''
+    | Failing test case: test_compute_pace_per_pet_safe(
+    |     s='/',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 15, in test_compute_pace_per_pet_safe
+    |     compute_pace_per_pet(s)
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\processor.py", line 12, in compute_pace_per_pet
+    |     mins_str, pets_str = walk_metrics_str.split('/')
+    |     ^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 17, in test_compute_pace_per_pet_safe
+    |     pytest.fail(f"compute_pace_per_pet crashed for {s!r}: {exc}")
+    | Failed: compute_pace_per_pet crashed for '': not enough values to unpack (expected 2, got 1)
+    | Failing test case: test_compute_pace_per_pet_safe(
+    |     s='',  # or any other generated value
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 15, in test_compute_pace_per_pet_safe
+    |     compute_pace_per_pet(s)
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\processor.py", line 12, in compute_pace_per_pet
+    |     mins_str, pets_str = walk_metrics_str.split('/')
+    |                          ^^^^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 17, in test_compute_pace_per_pet_safe
+    |     pytest.fail(f"compute_pace_per_pet crashed for {s!r}: {exc}")
+    | Failed: compute_pace_per_pet crashed for None: 'NoneType' object has no attribute 'split'
+    | Failing test case: test_compute_pace_per_pet_safe(
+    |     s=None,  # or any other generated value
+    | )
+    +------------------------------------
+___________________ test_lookup_temperament_surcharge_safe ____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 20, in test_lookup_temperament_surcharge_safe
+  |     def test_lookup_temperament_surcharge_safe(s):
+  |                    ^^^
+  | BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 22, in test_lookup_temperament_surcharge_safe
+    |     lookup_temperament_surcharge(s)
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\processor.py", line 26, in lookup_temperament_surcharge
+    |     return surcharges[prefix]
+    |            ~~~~~~~~~~^^^^^^^^
+    | KeyError: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 24, in test_lookup_temperament_surcharge_safe
+    |     pytest.fail(f"lookup_temperament_surcharge crashed for {s!r}: {exc}")
+    | Failed: lookup_temperament_surcharge crashed for '': ''
+    | Failing test case: test_lookup_temperament_surcharge_safe(
+    |     s='',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py:23
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 22, in test_lookup_temperament_surcharge_safe
+    |     lookup_temperament_surcharge(s)
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\processor.py", line 19, in lookup_temperament_surcharge
+    |     prefix = temperament_code.strip().upper()[:3]
+    |              ^^^^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py", line 24, in test_lookup_temperament_surcharge_safe
+    |     pytest.fail(f"lookup_temperament_surcharge crashed for {s!r}: {exc}")
+    | Failed: lookup_temperament_surcharge crashed for None: 'NoneType' object has no attribute 'strip'
+    | Failing test case: test_lookup_temperament_surcharge_safe(
+    |     s=None,
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7\test_processor.py:23
+    +------------------------------------
+____________ test_valid_temperament_codes_keep_expected_surcharges ____________
+test_processor.py:37: in test_valid_temperament_codes_keep_expected_surcharges
+    assert lookup_temperament_surcharge("PLAYFUL") == 5.0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+processor.py:26: in lookup_temperament_surcharge
+    return surcharges[prefix]
+           ^^^^^^^^^^^^^^^^^^
+E   KeyError: 'PLA'
+=========================== short test summary info ===========================
+FAILED test_processor.py::test_parse_walk_schedule_no_crash - BaseExceptionGr...
+FAILED test_processor.py::test_compute_pace_per_pet_safe - BaseExceptionGroup...
+FAILED test_processor.py::test_lookup_temperament_surcharge_safe - BaseExcept...
+FAILED test_processor.py::test_valid_temperament_codes_keep_expected_surcharges
+========================= 4 failed, 2 passed in 8.98s =========================

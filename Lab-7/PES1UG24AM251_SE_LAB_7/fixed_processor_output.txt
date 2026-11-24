@@ -1,0 +1,8 @@
+==== Running parse_walk_schedule ====
+Enter schedule (e.g. 2-30-YES): Walk: 2 pets, 30 mins - Total $45.00
+
+==== Running compute_pace_per_pet ====
+Enter minutes/pets (e.g. 45/3): Pace (min/pet): 15.0
+
+==== Running lookup_temperament_surcharge ====
+Enter temperament code (e.g. CALM, PLAYFUL, AGGRESSIVE): Surcharge: $ 0.0

@@ -1,0 +1,31 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\Sanket Shivaji R\Documents\Codex\2026-11-23\at\work\L6_L7_13_pet_walking_service\Lab 7
+plugins: hypothesis-6.170.17
+collecting ... collected 21 items
+
+test_processor.py::test_parse_walk_schedule_no_crash PASSED              [  4%]
+test_processor.py::test_compute_pace_per_pet_safe PASSED                 [  9%]
+test_processor.py::test_lookup_temperament_surcharge_safe PASSED         [ 14%]
+test_processor.py::test_valid_schedule_keeps_expected_fee PASSED         [ 19%]
+test_processor.py::test_valid_pace_is_rounded_to_two_decimals PASSED     [ 23%]
+test_processor.py::test_valid_temperament_codes_keep_expected_surcharges PASSED [ 28%]
+test_processor.py::test_invalid_schedules_return_none[None] PASSED       [ 33%]
+test_processor.py::test_invalid_schedules_return_none[] PASSED           [ 38%]
+test_processor.py::test_invalid_schedules_return_none[2-30-MAYBE] PASSED [ 42%]
+test_processor.py::test_invalid_schedules_return_none[2-0-NO] PASSED     [ 47%]
+test_processor.py::test_invalid_schedules_return_none[1-30-YES-extra] PASSED [ 52%]
+test_processor.py::test_invalid_metrics_return_none[None] PASSED         [ 57%]
+test_processor.py::test_invalid_metrics_return_none[] PASSED             [ 61%]
+test_processor.py::test_invalid_metrics_return_none[30/0] PASSED         [ 66%]
+test_processor.py::test_invalid_metrics_return_none[nan/1] PASSED        [ 71%]
+test_processor.py::test_invalid_metrics_return_none[10/inf] PASSED       [ 76%]
+test_processor.py::test_invalid_metrics_return_none[-1/2] PASSED         [ 80%]
+test_processor.py::test_invalid_metrics_return_none[1/2/3] PASSED        [ 85%]
+test_processor.py::test_unknown_temperaments_return_none[None] PASSED    [ 90%]
+test_processor.py::test_unknown_temperaments_return_none[] PASSED        [ 95%]
+test_processor.py::test_unknown_temperaments_return_none[UNKNOWN] PASSED [100%]
+
+============================= 21 passed in 1.63s ==============================
